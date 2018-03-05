@@ -24,7 +24,7 @@ scaler.fit(X_train, y_train)
 X_train_scaled = scaler.transform(X_train)
 X_test_scaled = scaler.transform(X_test)
 
-clf = Perceptron(random_state=42, alpha=.0001, n_iter=100)
+clf = Perceptron(alpha=.0001, n_iter=100)
 
 
 
@@ -32,7 +32,7 @@ clf.fit(X_train_scaled, y_train)
 
 y_pred = clf.predict(X_test_scaled)
 
-print('Perceptron properties:\n')
+# print('Perceptron properties:\n')
 # for k,v in clf.__dict__:
 #     print("{0}: {1}".format(k, v))
 print(classification_report(y_test, y_pred))
