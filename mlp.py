@@ -33,7 +33,7 @@ X_train_scaled = scaler.transform(X_train)
 X_test_scaled = scaler.transform(X_test)
 
 env_labels = {
-'activation': ['relu'],
+'activation': ['identity', 'logistic', 'tanh', 'relu'],
 'solver': ['lbfgs', 'sgd', 'adam'],
 'alpha':(10**(-i) for i in range(8)),
 'learning_rate': ['constant', 'invscaling', 'adaptive']
